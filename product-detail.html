@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — ŌURA</title><!-- Updated dynamically by main.js -->
+  <meta name="description" content="Product detail." /><!-- Could be updated dynamically -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-label="ŌURA — Home">ŌURA</a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#all-products">Products</a>
+        <a href="#">Blog</a>
+        <a href="#">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" aria-label="items in cart">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div id="detail-container" class="container">
+
+      <!-- ══════════════════════════════════════
+           DETAIL LAYOUT
+           All content below is populated by
+           main.js → renderDetailPage()
+      ════════════════════════════════════════ -->
+      <div class="detail-layout">
+
+        <!-- ── LEFT: Image Gallery ────────────── -->
+        <div class="gallery-wrap" aria-label="Product images">
+
+          <!-- Thumbnails (injected by JS) -->
+          <div id="gallery-thumbs" class="gallery-thumbs" role="list" aria-label="Image thumbnails">
+            <!-- Thumbnails injected here -->
+          </div>
+
+          <!-- Main Image -->
+          <div class="gallery-main">
+            <img
+              id="gallery-main-img"
+              src=""
+              alt=""
+              aria-live="polite"
+            />
+          </div>
+
+        </div>
+
+
+        <!-- ── RIGHT: Product Info ────────────── -->
+        <div class="detail-info">
+
+          <!-- Breadcrumb navigation -->
+          <nav id="detail-breadcrumb" class="detail-breadcrumb" aria-label="Breadcrumb">
+            <!-- Populated by JS -->
+          </nav>
+
+          <!-- Product name -->
+          <h1 id="detail-name" class="detail-name"><!-- Populated by JS --></h1>
+
+          <!-- Price -->
+          <p id="detail-price" class="detail-price"><!-- Populated by JS --></p>
+
+          <!-- Description -->
+          <p id="detail-description" class="detail-description"><!-- Populated by JS --></p>
+
+
+          <!-- ── Size Selection ───────────────── -->
+          <div class="detail-label" id="size-label" style="display: flex; justify-content: space-between; align-items: center;">
+            Select Size
+            <button id="trigger-size-guide" class="btn-size-guide">Size Guide</button>
+          </div>
+          <div
+            id="size-options"
+            class="size-options"
+            role="group"
+            aria-labelledby="size-label"
+          >
+            <!-- Size buttons injected by JS -->
+          </div>
+
+
+          <!-- ── Quantity Selection ───────────── -->
+          <div class="detail-qty">
+            <div class="detail-label" id="qty-label">Quantity</div>
+            <div class="qty-control" role="group" aria-labelledby="qty-label">
+              <button
+                id="detail-qty-minus"
+                class="qty-btn"
+                aria-label="Decrease quantity"
+                disabled
+              >−</button>
+              <span
+                id="detail-qty-display"
+                class="qty-display"
+                aria-live="polite"
+                aria-atomic="true"
+              >1</span>
+              <button
+                id="detail-qty-plus"
+                class="qty-btn"
+                aria-label="Increase quantity"
+              >+</button>
+            </div>
+          </div>
+
+
+          <!-- ── Add to Cart ──────────────────── -->
+          <button
+            id="detail-add-to-cart"
+            class="add-to-cart-btn"
+            aria-label="Add to cart"
+          >
+            Add to Cart
+          </button>
+
+          <!-- Reassurance copy -->
+          <div style="margin-top:var(--space-md);display:flex;gap:var(--space-lg);flex-wrap:wrap;">
+            <span style="font-size:1.2rem;color:var(--mid-grey);">
+              ✦ Free shipping over $150
+            </span>
+            <span style="font-size:1.2rem;color:var(--mid-grey);">
+              ✦ Free 30-day returns
+            </span>
+            <span style="font-size:1.2rem;color:var(--mid-grey);">
+              ✦ Sustainably made
+            </span>
+          </div>
+
+        </div><!-- /detail-info -->
+
+      </div><!-- /detail-layout -->
+
+      <!-- 1. ADDED RELATED PRODUCTS -->
+      <section class="section related-products" style="padding-top: 0;">
+        <div class="section-header"><h2>You May Also Like</h2></div>
+        <div id="related-grid" class="product-grid"></div>
+      </section>
+
+      <!-- 2. ADDED REVIEWS -->
+      <section class="section product-reviews" style="padding-top: 0;">
+        <div class="section-header"><h2>Customer Reviews</h2><span class="label">4.8 / 5.0</span></div>
+        <div class="review-list">
+          <div class="review-card">
+            <div class="review-header"><span class="review-stars">★★★★★</span><span class="review-author">Sarah M.</span></div>
+            <p class="review-text">Absolutely love the fabric quality. It drapes beautifully and feels like it will last a lifetime.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-header"><span class="review-stars">★★★★☆</span><span class="review-author">Elena T.</span></div>
+            <p class="review-text">Beautiful cut and color. Slightly oversized, so I recommend sizing down if you prefer a fitted look.</p>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- 3. ADDED SIZE GUIDE MODAL -->
+  <div id="size-guide-modal" class="modal-overlay" role="dialog">
+    <div class="modal">
+      <h3 style="margin-bottom:var(--space-md)">Size Guide</h3>
+      <table class="size-table">
+        <tr><th>Size</th><th>Chest (in)</th><th>Waist (in)</th></tr>
+        <tr><td>XS</td><td>32 - 34</td><td>24 - 26</td></tr>
+        <tr><td>S</td><td>34 - 36</td><td>26 - 28</td></tr>
+        <tr><td>M</td><td>36 - 38</td><td>28 - 30</td></tr>
+        <tr><td>L</td><td>38 - 40</td><td>30 - 32</td></tr>
+        <tr><td>XL</td><td>40 - 42</td><td>32 - 34</td></tr>
+      </table>
+      <div style="margin-top:var(--space-lg)"><button class="btn btn--primary modal-close">Got it</button></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">ŌURA</a>
+          <p>Considered clothing in a palette drawn from nature.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Sizing Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="index.html#all-products">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ŌURA. All rights reserved.</p>
+        <div style="display:flex;gap:2.4rem">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

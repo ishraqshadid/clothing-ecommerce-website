@@ -1,0 +1,48 @@
+LICENSE AGREEMENT
+
+Product: E-commerce Website Template
+Author: Ishraq Shadid
+Email: ishraqshadid4@gmail.com
+
+By purchasing, downloading, or using this product, you agree to the following terms:
+
+1. Permitted Use
+You are allowed to:
+- Use this template for personal projects
+- Use this template for commercial projects
+- Use this template for client projects
+- Modify the design, code, text, images, and layout according to your needs
+
+2. Prohibited Use
+You are NOT allowed to:
+- Resell this template as a template, source code package, or downloadable website kit
+- Redistribute, share, gift, lease, sublicense, or upload the original files anywhere
+- Claim this template as your own original work
+- Include this product in any competing marketplace, bundle, or template collection
+- Sell or distribute this product in a way that allows others to extract or reuse the original files
+
+3. End Product Rule
+You may use this template to create a final website or final project for yourself or for a client.
+However, the original source files must not be resold or redistributed, whether modified or unmodified.
+
+4. Intellectual Property
+All original rights to this template remain with the author.
+This purchase gives you a license to use the product, not ownership of the source files.
+
+5. Third-Party Assets and Libraries
+This product may include or reference third-party fonts, icons, CSS frameworks, JavaScript libraries, or CDN resources such as Google Fonts, Font Awesome, Swiper, and Bootstrap.
+
+All such third-party resources remain the property of their respective owners and are governed by their own licenses.
+
+The buyer is responsible for reviewing and complying with the license terms of all third-party resources used in this template.
+
+6. Support
+Support is limited to basic guidance regarding the purchased files unless otherwise stated by the author.
+
+7. Refunds
+Due to the digital nature of this product, refunds are not guaranteed unless required by platform policy or applicable law.
+
+8. Acceptance
+By purchasing, downloading, or using this product, you accept all terms of this license.
+
+© Ishraq Shadid. All rights reserved.

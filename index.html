@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ŌURA — Considered Clothing</title>
+  <meta name="description" content="Minimal, considered clothing in a palette drawn from nature. ŌURA." />
+
+  <!-- Google Fonts: Cormorant Garamond (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="ŌURA — Home">ŌURA</a>
+
+      <!-- Primary Navigation -->
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About Us</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+        </button>
+        <a href="wishlist.html" class="cart-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </a>
+        <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+          <!-- Cart icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" aria-label="items in cart">0</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+
+      <!-- Text side -->
+      <div class="container hero__text">
+        <p class="label hero__eyebrow ">New Collection — Spring 2025</p>
+        <h1 class="hero__heading">Wear<br/>the<br/><em>quiet</em></h1>
+        <p class="hero__sub">
+          Clothing made to move through the world without noise.
+          Natural palettes. Considered cuts. Everyday wear that ages with you.
+        </p>
+        <div class="hero__actions">
+          <a href="products.html" class="btn btn--primary">Shop Now</a>
+          <a href="#" class="btn btn--outline">Our Story</a>
+        </div>
+      </div>
+
+      <!-- Image side (placeholder) -->
+      <div class="hero__image" aria-hidden="true">
+        <div class="hero__image-placeholder"><img src="images/coverimg/cover2.jpg" alt=""></div>
+      </div>
+
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         ALL PRODUCTS SECTION
+    ════════════════════════════════════════════ -->
+    <section id="all-products" class="section" aria-labelledby="all-products-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 id="all-products-heading">All Products</h2>
+
+          <!-- Category Filter Dropdown -->
+          <div>
+            <label for="category-filter" class="label" style="margin-right:1rem;">Filter by</label>
+            <select id="category-filter" class="filter-select" aria-label="Filter by category">
+              <option value="all">All Categories</option>
+              <!-- Options populated dynamically by main.js -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Product Grid — rendered by main.js -->
+        <div
+          id="all-products-grid"
+          class="product-grid"
+          aria-live="polite"
+          aria-label="Products"
+        >
+          <!-- Cards injected here -->
+        </div>
+
+        <!-- View All -->
+        <div class="view-all-row">
+          <a href="products.html" class="btn btn--ghost">View All Products</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         PROMOTIONAL BANNER 1
+    ════════════════════════════════════════════ -->
+    <section class="promo-banner" aria-label="Promotion">
+      <div class="container">
+        <div class="promo-banner__inner">
+          <div class="promo-banner__image" aria-hidden="true">
+            <img src="images/coverimg/cover3.jpg" alt="">
+          </div>
+          <div class="promo-banner__content">
+            <p class="label">Free Shipping</p>
+            <h2>On orders<br/>over $150</h2>
+            <p>
+              Every piece ships in recycled packaging.
+              Free returns within 30 days, no questions asked.
+            </p>
+            <a href="#all-products" class="btn btn--outline" style="border-color:rgba(255,255,255,0.3);color:#fff;">
+              Start Shopping
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         TRENDING PRODUCTS SECTION
+    ════════════════════════════════════════════ -->
+    <section class="trending-section" aria-labelledby="trending-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <h2 id="trending-heading">Trending Now</h2>
+          <span class="label">This season's picks</span>
+        </div>
+
+        <!-- Trending Grid — rendered by main.js from trending:true products -->
+        <div
+          id="trending-grid"
+          class="product-grid"
+          aria-live="polite"
+          aria-label="Trending products"
+        >
+          <!-- Cards injected here -->
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         PROMOTIONAL BANNER 2
+    ════════════════════════════════════════════ -->
+    <section class="promo-banner promo-banner--alt" aria-label="Promotion">
+      <div class="container">
+        <div class="promo-banner__inner">
+          <div class="promo-banner__image" aria-hidden="true">
+            <img src="images/coverimg/cover4.jpg" alt="">
+          </div>
+          <div class="promo-banner__content">
+            <p class="label">Our Commitment</p>
+            <h2>Made to<br/>last longer</h2>
+            <p>
+              We use only GOTS-certified organic cotton, responsible wool,
+              and recycled fibres. Slow fashion means buying less, wearing more.
+            </p>
+            <a href="#" class="btn btn--outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         NEWSLETTER
+    ════════════════════════════════════════════ -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <p class="label" style="color:var(--matcha);margin-bottom:var(--space-md);">Stay in the loop</p>
+        <h2 id="newsletter-heading">Quiet updates,<br/>when they matter</h2>
+        <p>New arrivals, restocks, and the occasional story. No noise.</p>
+
+        <form id="newsletter-form" class="newsletter__form" novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <input
+            id="newsletter-email"
+            type="email"
+            class="newsletter__input"
+            placeholder="your@email.com"
+            required
+            aria-required="true"
+          />
+          <button type="submit" class="newsletter__btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">ŌURA</a>
+          <p>Considered clothing in a palette drawn from nature. Designed for everyday wear and built to last.</p>
+        </div>
+
+        <!-- Shop links -->
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#all-products">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <!-- Help links -->
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Sizing Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- About links -->
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 ŌURA. All rights reserved.</p>
+        <div style="display:flex;gap:2.4rem">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Screen-reader utility class (inline, no extra file needed) -->
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+
+  <!-- Application script -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
