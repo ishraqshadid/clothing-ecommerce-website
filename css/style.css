@@ -396,3 +396,6 @@ h4 { font-size: 1.8rem; }
     font-size: 1.6rem; /* Comfortable read on compact devices */
   }
 }
+
+/* Accessibility utility moved from inline HTML styles */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
