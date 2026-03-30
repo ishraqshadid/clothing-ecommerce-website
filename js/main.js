@@ -414,24 +414,37 @@ function initMobileNav() {
 
 // ─── BOOT ──────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  initHeaderScroll(); updateCartBadge(); initModals(); initNewsletter(); initMobileNav();
+  initHeaderScroll();
+  updateCartBadge();
+  initModals();
+  initNewsletter();
+  initMobileNav();
+
   const path = window.location.pathname;
 
-  if (path.includes('products.html')) {
-    populateCategoryFilter(); renderProductsPage();
+  if (path.includes('products')) {
+    populateCategoryFilter();
+    renderProductsPage();
     document.getElementById('product-search')?.addEventListener('input', renderProductsPage);
     document.getElementById('product-sort')?.addEventListener('change', renderProductsPage);
-  } else if (path.includes('wishlist.html')) {
+
+  } else if (path.includes('wishlist')) {
     renderWishlistPage();
-  } else if (path.includes('blog.html')) {
+
+  } else if (path.includes('blog')) {
     renderBlogPage();
-  } else if (path.endsWith('index.html') || path === '/' || path.endsWith('/shop/')) {
-    populateCategoryFilter(); renderAllProducts(); renderTrendingProducts();
-  } else if (path.includes('cart.html')) {
-    renderCartPage(); handleCheckoutFlow();
-  } else if (path.includes('product-detail.html')) {
+
+  } else if (path.endsWith('index.html') || path === '/' || path.endsWith('/')) {
+    populateCategoryFilter();
+    renderAllProducts();
+    renderTrendingProducts();
+
+  } else if (path.includes('cart')) {
+    renderCartPage();
+    handleCheckoutFlow();
+
+  } else if (path.includes('product-detail')) {
     renderDetailPage();
   }
 });
-
 
